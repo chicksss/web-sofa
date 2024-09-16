@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOFA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body class="">
+    <button id="mybuttonforres" type="button" class="py-5 px-5 md:hidden block">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="30"
+        height="30"
+        viewBox="0,0,256,256"
+      >
+        <g
+          fill="#ffffff"
+          fill-rule="nonzero"
+          stroke="none"
+          stroke-width="1"
+          stroke-linecap="butt"
+          stroke-linejoin="miter"
+          stroke-miterlimit="10"
+          stroke-dasharray=""
+          stroke-dashoffset="0"
+          font-family="none"
+          font-weight="none"
+          font-size="none"
+          text-anchor="none"
+          style="mix-blend-mode: normal"
+        >
+          <g transform="scale(5.12,5.12)">
+            <path
+              d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <nav class="bg-black fixed w-full md:bg-transparent md:gap-10 z-20">
+      <ul
+        class="text-center text-white md:flex md:justify-between gap-10 py-5 hidden md:block items-center md:flex md:justify-evenly"
+      >
+        <div>
+          <h1 class="text-5xl font-light">S</h1>
+        </div>
+        <div class="md:flex md:justify-evenly gap-20">
+          <li>Home</li>
+          <li>Features</li>
+          <li>About</li>
+          <li>Reviews</li>
+        </div>
+      </ul>
+
+      <ul
+        id="forcp"
+        class="text-white text-center flex justify-center block md:hidden z-20"
+      >
+        <div class="">
+          <li class="py-5">Home</li>
+
+          <li class="py-5">Contact</li>
+
+          <li class="py-5">Service</li>
+
+          <li class="py-5">About</li>
+          <li class="py-5">Faq</li>
+        </div>
+      </ul>
+    </nav>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))) {
+                return false;
+            }
+        }
+        </script>
+        
+    <script>
+      $(document).ready(function () {
+        $("#mybuttonforres").click(function () {
+          $("#forcp").toggle();
+        });
+      });
+    </script>
+
+    <section
+      class="h-[100vh] grid place-items-center bg-center bg-no-repeat bg-[url('p1.avif')] bg-cover"
+    >
+      <div class="h-[50vh]">
+        <div class="text-[#fefae0]">
+          <h1 class="font-['Nanum-Myeongjo-serif'] text-5xl">
+            Discover Comfort with Our Stylish Sofas
+          </h1>
+          <p>Find the perfect sofa to complement your home</p>
+          <button
+            class="border border-1 px-6 py-1 mt-5 hover:bg-[#fefae0] hover:text-black"
+          >
+            Shop Now
+          </button>
+          <button
+            class="px-6 py-1 mt-5 hover:bg-transparent hover:text-white bg-[#264653]"
+          >
+            View Collections
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="h-full bg-[#264653] text-[#fefae0] grid place-items-center py-5"
+    >
+      <div>
+        <div>
+          <h1 class="font-['Nanum-Myeongjo-serif'] text-4xl">
+            Featured Sofa Collections
+          </h1>
+        </div>
+
+        <div class="text-center mt-5">
+          <i class="mt-5">"Our Bestsellers"</i>
+        </div>
+        <div class="mt-5">
+          <div class="flex justify-evenly gap-10 font-['Nanum-Myeongjo-serif']">
+            <div class="relative group">
+              <!-- Image -->
+              <img src="p2.jpg" alt="Sofa" class="w-full h-full" />
+
+              <!-- Hover Title -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-xl font-bold">Modern Sofa</span>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <!-- Image -->
+              <img src="p3.jpg" alt="Sofa" class="w-full h-full" />
+
+              <!-- Hover Title -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-xl font-bold">Sectional Sofa</span>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <!-- Image -->
+              <img src="p4.jpg" alt="Sofa" class="w-full h-full" />
+
+              <!-- Hover Title -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-xl font-bold">Recliner Sofa</span>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <!-- Image -->
+              <img src="p5.jpg" alt="Sofa" class="w-full h-full" />
+
+              <!-- Hover Title -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-xl font-bold">Sleeper Sofa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="h-full bg-[#264653] text-[#fefae0] font-['Nanum-Myeongjo-serif'] grid place-items-center py-20"
+    >
+      <div>
+        <div class="text-center">
+          <h1 class="font-['Nanum-Myeongjo-serif'] text-4xl">About Us</h1>
+        </div>
+
+        <div class="flex justify-center gap-10 mt-5">
+          <div class="">
+            <h1 class="font-['Nanum-Myeongjo-serif'] text-3xl">
+              Crafting Comfort Since 2000
+            </h1>
+            <p class="md:w-96 text-justify mt-5">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+              repellat, nihil blanditiis nisi perferendis illo optio voluptatum
+              temporibus nam itaque quis accusantium quam voluptate eum ullam
+              ducimus, enim delectus esse.
+            </p>
+            <p class="text-justify mt-5">Learn More About Our Story</p>
+          </div>
+          <div>
+            <img src="p6.avif" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="h-full bg-[#264653] text-[#fefae0] font-['Nanum-Myeongjo-serif'] grid place-items-center py-20"
+    >
+      <div>
+        <div class="text-center">
+          <h1 class="font-['Nanum-Myeongjo-serif'] text-4xl">
+            Customer Reviews
+          </h1>
+        </div>
+
+        <div class="grid gap-10 mt-5">
+          <div class="text-center">
+            <h1 class="font-['Nanum-Myeongjo-serif'] text-2xl">
+              What Our Customers Are Saying
+            </h1>
+          </div>
+          <div class="flex justify-evenly gap-5">
+            <div class="rounded-lg px-4 py-4 shadow-xl bg-[#a3b18a] text-[#264653]">
+              <div class="flex justify-between items-center">
+                <img src="u1.jpg" class="h-14 w-14 rounded-full" alt="" />
+                <b>Mohaammed Adbdul</b>
+              </div>
+              <div class="mt-5">
+                <p>Comments:</p>
+                <p class="w-64 text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio inventore delectus quisquam perferendis, libero
+                  totam nobis dolor possimus quae culpa aliquid blanditiis velit
+                  beatae provident corporis eos autem quibusdam facilis.
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-lg px-4 py-4 shadow-xl bg-[#a3b18a] text-[#264653]">
+                <div class="flex justify-between items-center">
+                  <img src="u2.jpg" class="h-14 w-14 rounded-full" alt="" />
+                  <b>Adbdul Soliamn</b>
+                </div>
+                <div class="mt-5">
+                  <p>Comments:</p>
+                  <p class="w-64 text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio inventore delectus quisquam perferendis, libero
+                    totam nobis dolor possimus quae culpa aliquid blanditiis velit
+                    beatae provident corporis eos autem quibusdam facilis.
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="rounded-lg px-4 py-4 shadow-xl bg-[#a3b18a] text-[#264653]">
+                <div class="flex justify-between items-center">
+                  <img src="u3.jpg" class="h-14 w-14 rounded-full" alt="" />
+                  <b>Gen Tarub</b>
+                </div>
+                <div class="mt-5">
+                  <p>Comments:</p>
+                  <p class="w-64 text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio inventore delectus quisquam perferendis, libero
+                    totam nobis dolor possimus quae culpa aliquid blanditiis velit
+                    beatae provident corporis eos autem quibusdam facilis.
+                  </p>
+                </div>
+              </div>
+
+              <div class="rounded-lg px-4 py-4 shadow-xl bg-[#a3b18a] text-[#264653]">
+                <div class="flex justify-between items-center">
+                  <img src="u4.jpg" class="h-14 w-14 rounded-full" alt="" />
+                  <b>Gen Torre</b>
+                </div>
+                <div class="mt-5">
+                  <p>Comments:</p>
+                  <p class="w-64 text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio inventore delectus quisquam perferendis, libero
+                    totam nobis dolor possimus quae culpa aliquid blanditiis velit
+                    beatae provident corporis eos autem quibusdam facilis.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <div class="flex justify-between bg-[#264653] text-[#fefae0] font-['Nanum-Myeongjo-serif'] px-44 py-5">
+            <div>
+                <p>About | Privacy Policy | Terms of Service | FAQs</p>
+            </div>
+            <div>
+                <p>Contact: 09569795899</p>
+                
+            </div>
+            <div>
+                <p>chicossh@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
